@@ -1,0 +1,21 @@
+<div class="container">
+    <button  class="logout" mat-raised-button (click)='logout()'>
+        Logout
+    </button>
+    <div class="navigare">
+        <p *ngIf="loggedUser.email != ''">
+            Logged user : {{loggedUser.email}}
+        </p>
+        <p #elseBlock>
+            Bine ai venit!
+        </p>
+        <div class="navigare-buttons">
+            <button mat-raised-button (click)='masini()'>
+                Masini
+            </button>
+            <button mat-raised-button (click)='piese()'>
+                Piese
+            </button>
+        </div>
+    </div>
+</div>

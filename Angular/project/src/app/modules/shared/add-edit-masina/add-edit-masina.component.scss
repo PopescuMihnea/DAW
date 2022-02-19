@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .textbox{
+        flex-grow: 2;
+        line-height: normal;
+    }
+    
+}
+.title{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    background-color: #777777;
+    color: white;
+    }

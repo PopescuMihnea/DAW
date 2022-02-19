@@ -1,0 +1,31 @@
+<div class="container">
+    <button  class="logout" mat-raised-button (click)='logout()'>
+        Logout
+    </button>
+    <button mat-raised-button (click)='masini()'>
+        Masini
+    </button>
+</div>
+
+<div class="container-card">
+    <mat-card>
+        <h1 class="title">
+            Detalii masina
+        </h1>
+        <p>
+           Marca: {{masina.marca}} 
+        </p>
+        <p>
+            Model: {{masina.model}}
+        </p>
+        <p>
+            Cost: {{masina.cost}}
+        </p>
+        <p>
+            Descriere:
+        </p>
+        <p>
+            {{masina.descriere}}
+        </p>
+    </mat-card>
+</div>

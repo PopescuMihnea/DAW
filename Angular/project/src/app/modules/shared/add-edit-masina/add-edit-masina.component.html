@@ -1,0 +1,56 @@
+<div class="container">
+    <h1 class="title" [innerHTML]="titlu">
+        
+    </h1>
+    
+    <form [formGroup]="masinaForm" class="form">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Marca</mat-label>
+            <input matInput placeholder="Marca" formControlName="marca" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Model</mat-label>
+            <input matInput placeholder="Model" formControlName="model" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Culoare</mat-label>
+            <input matInput placeholder="Culoare" formControlName="culoare" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>An fabricare</mat-label>
+            <input matInput placeholder="An fabricare" formControlName="anFabricare" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Km</mat-label>
+            <input type="number" matInput placeholder="Km" formControlName="km" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Cost</mat-label>
+            <input type="number" matInput placeholder="Cost" formControlName="cost" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="textbox">
+            <mat-label>Descriere</mat-label>
+            <textarea matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="20"
+            placeholder="Descriere" formControlName="descriere"></textarea> 
+        </mat-form-field>
+    </form>
+    <div class="buttons">
+        <button mat-raised-button [mat-dialog-close]="true">Inchide</button>
+        <button *ngIf="this.editId.id == -1" mat-raised-button (click)="addMasina()">Adauga Masina</button>
+        <button *ngIf="this.editId.id != -1" mat-raised-button (click)="editMasina()">Modifica Masina</button>
+    </div>
+    <p class="message" *ngIf="this.addMessage.msg != '' ">
+        {{this.addMessage.msg}}
+    </p>
+
+</div>
